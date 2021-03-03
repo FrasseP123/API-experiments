@@ -1,17 +1,34 @@
-<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-<script>
-if (annyang) {
-  // Let's define our first command. First the text we expect, and then the function it should call
-  var commands = {
-    'show tps report': function() {
-      $('#tpsreport').animate({bottom: '-100px'});
-    }
-  };
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script>
+      "use strict";
+      if (annyang) {
+        var hello = function () {
+          alert("hej");
+        };
+        var showSomething = function (tag) {
+          alert("You said " + tag + " to me?!");
+        };
 
-  // Add our commands to annyang
-  annyang.addCommands(commands);
+        var audio = new Audio(
+          "https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3"
+        );
 
-  // Start listening. You can call this here, or attach this call to an event, button, etc.
-  annyang.start();
-}
-</script>
+        var commands = {
+          "hello (there)": hello,
+          "show me *search": showSomething,
+          "play sound": function () {
+            audio.play();
+          },
+        };
+        
+        annyang.addCommands(commands);
+        annyang.setLanguage("en");
+        annyang.start();
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
