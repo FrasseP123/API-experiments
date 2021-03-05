@@ -3,13 +3,39 @@
   <head>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script>
-      "use strict";
       if (annyang) {
         var hello = function () {
-          alert("hej");
+          alert("Hello human friend");
         };
+
+        var writeDown = function (tag) {
+          document.body.innerHTML +=
+            "<div>" + "I think you wanted me to write down: " + tag + "</div>";
+        };
+
         var showSomething = function (tag) {
-          alert("You said " + tag + " to me?!");
+          alert("You want to see " + tag + ", you freak?!");
+        };
+
+        var colors = function (tag) {
+          if (tag === "blue") {
+            alert("Nice color");
+          }
+          if (tag === "yellow") {
+            alert("Ugly color");
+          }
+          if (tag === "red") {
+            alert("Ugly color");
+          }
+          if (tag === "green") {
+            alert("Beautiful color");
+          }
+          if (tag === "black") {
+            alert("Not a color, stupid");
+          }
+          if (tag === "white") {
+            alert("Not a color, stupid");
+          }
         };
 
         var audio = new Audio(
@@ -18,18 +44,16 @@
 
         var commands = {
           "hello (there)": hello,
-          "show me *search": showSomething,
+          "show me *tag": showSomething,
+          "write down *tag": writeDown,
+          "my favorite color is *tag": colors,
           "play sound": function () {
             audio.play();
           },
         };
 
         annyang.addCallback("result", function (phrases) {
-          console.log("I think the user said: ", phrases[0]);
-          console.log(
-            "But then again, it could be any of the following: ",
-            phrases
-          );
+          document.body.innerHTML = "I think you said: " + phrases[0];
         });
 
         annyang.debug();
