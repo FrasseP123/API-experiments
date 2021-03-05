@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <script>
+  "use strict";
+  if (annyang) {
+    var hello = function() {
+      alert("Hello human friend");
+    };
+    var sad = function() {
+      alert("Why are you sad");
+    };
+    var commands = {
+      'hello (there)': hello,
+      'I\'m sad':      sad,
+    };
+
+    annyang.debug();
+    annyang.addCommands(commands);
+    annyang.setLanguage('en');
+    annyang.start();
+  }
+  </script>
+</head>
+<body>
+</body>
+</html>
