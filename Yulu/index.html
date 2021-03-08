@@ -1,78 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <img id="sketch" src="" width="768" height="576" />
-        <h1 id="words">Hi!Sunny day made me feel like talking, How are you today?</h1>
-        
-        
-
-        <script>
-            
-         //fetch sketch and display on website
-            async function sketch(){
-                const response = await fetch ("sketch.jpg");
-                const blob= await response.blob();
-                document.getElementById("sketch").src = URL.createObjectURL(blob);
-                console.log(blob);
-            };
-
-            sketch();
-
-          //fetch a different sketch to different voice controls
-            async function sketch1(){
-                const response = await fetch ("sketch1.png");
-                const blob= await response.blob();
-                document.getElementById("sketch").src = URL.createObjectURL(blob);
-                console.log(blob);
-            };
-            
-            
-           //fetch a different sketch to different voice controls
-            async function sketch2(){
-                const response = await fetch ("sketch2.png");
-                const blob= await response.blob();
-                document.getElementById("sketch").src = URL.createObjectURL(blob);
-                console.log(blob);
-            };
-
-
-            let words=document.getElementById("words");
-
-
-            //voice control and texts feedback on website
-            if (annyang) {
-              //react to users say "I am good thank you"
-              var commands = {
-                'I am good thank you': function() {
-                    
-                  sketch1();
-                  words.innerHTML="That is perfect!"
-
-                },
-
-                //react to users say "I am having a bad day"
-                'I am having a bad day': function() {
-                  sketch2();
-                  words.innerHTML="I am sorry to hear that!"
-
-                },
-              };
-            
-              
-              annyang.addCommands(commands);
-            
-              //browser start listening. 
-              annyang.start();
-            }
-            </script>
-
-    </body>
+  <head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  </head>
+  <body>
+    <h1 id="voice"></h1>
     
+    <script>
+      let voice = document.getElementById("voice");
+      if (annyang) {
 
 
+        const Yes = new Audio ('“Yes” asking, keep on.m4a');
+
+
+        const calculateStats = function (month) {
+          $("#stats").text("Statistics for " + month);
+        };
+
+        const greeting = function () {
+          $("#greeting").text("Hello!");
+        };
+
+
+        const commands = {
+          // annyang will capture anything after a splat (*) and pass it to the function.
+          // e.g. saying "Show me Batman and Robin" will call showFlickr('Batman and Robin');
+          "Are you listening": function(){
+            Yes.play();
+            console.log("yes");
+          },
+
+        };
+
+
+
+        annyang.addCommands(commands);
+
+        //browser start listening.
+        annyang.start();
+      }
+    </script>
+  </body>
 </html>
