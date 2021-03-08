@@ -13,73 +13,43 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script>
       if (annyang) {
-        //Listens for the word "hello" and alerts
-        var hello = function () {
-          alert("Hello human friend");
-        };
 
-        //Listens for the phrase "write down" and displays the phrase you said in the body
-        var writeDown = function (tag) {
-          document.body.innerHTML +=
-            "<div>" + "I think you wanted me to write down: " + tag + "</div>";
-        };
+        //Declares variables for sound files
+        var sad = new Audio("Sad.m4a");
 
-        //Listens for the phrase "show me" and alerts text
-        var showSomething = function (tag) {
-          alert("You want to see " + tag + ", you freak?!");
-        };
+        var happy = new Audio("Happy.m4a");
 
-        //Listens for colors
-        var colors = function (tag) {
+        //Listens for words/feelings
+        var feelings = function (tag) {
+
           //Splits based on symbol " " and puts in array
           let word = tag.split(/\s+/);
 
-          //Console logs the last from the bottom of the array
-          //and the first word in the array
-          console.log("Last word: " + word[word.length - 1]);
+          //Console logs the first and last word from in the array
           console.log("First word: " + word[0]);
+          console.log("Last word: " + word[word.length - 1]);
 
-          //Searches if the word in the string is present in the array
-          console.log(word.indexOf("blue") > -1);
-
-          if (word.indexOf("blue") > -1) {
-            alert("Nice color");
+          //Searches if the word in the string is present in the array and plays correlating sounds
+          if (word.indexOf("sad") > -1) {
+            sad.play();
           }
-          if (tag === "yellow") {
-            alert("Ugly color");
-          }
-          if (tag === "red") {
-            alert("Ugly color");
-          }
-          if (tag === "green") {
-            alert("Beautiful color");
-          }
-          if (tag === "black") {
-            alert("Not a color, stupid");
-          }
-          if (tag === "white") {
-            alert("Not a color, stupid");
+          if (word.indexOf("happy") > -1) {
+            happy.play();
           }
         };
 
-        var audio = new Audio(
-          "https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3"
-        );
-
+        //Declares variable for the commands used
         var commands = {
-          "hello (there)": hello,
-          "show me *tag": showSomething,
-          "write down *tag": writeDown,
-          "*tag": colors,
-          "play sound": function () {
-            audio.play();
-          },
+          "*tag": feelings,
         };
 
+        //Prints what the API thinks I said on to the document
         annyang.addCallback("result", function (phrases) {
           document.body.innerHTML = "I think you said: " + phrases[0];
         });
 
+
+        //Adds debug console and commands, sets language to English and starts Annyang
         annyang.debug();
         annyang.addCommands(commands);
         annyang.setLanguage("en");
