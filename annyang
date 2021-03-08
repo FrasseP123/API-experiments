@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      body {
+        color: black;
+        background-color: rgba(24, 163, 19, 0.363);
+        font-size: 60px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+      }
+    </style>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script>
       if (annyang) {
+        //Listens for the word "hello" and alerts
         var hello = function () {
           alert("Hello human friend");
         };
 
+        //Listens for the phrase "write down" and displays the phrase you said in the body
         var writeDown = function (tag) {
           document.body.innerHTML +=
             "<div>" + "I think you wanted me to write down: " + tag + "</div>";
         };
 
+        //Listens for the phrase "show me" and alerts text
         var showSomething = function (tag) {
           alert("You want to see " + tag + ", you freak?!");
         };
 
+        //Listens for colors
         var colors = function (tag) {
-          if (tag === "blue") {
+          //Splits based on symbol " " and puts in array
+          let word = tag.split(/\s+/);
+
+          //Console logs the last from the bottom of the array
+          //and the first word in the array
+          console.log("Last word: " + word[word.length - 1]);
+          console.log("First word: " + word[0]);
+
+          //Searches if the word in the string is present in the array
+          console.log(word.indexOf("blue") > -1);
+
+          if (word.indexOf("blue") > -1) {
             alert("Nice color");
           }
           if (tag === "yellow") {
@@ -46,7 +70,7 @@
           "hello (there)": hello,
           "show me *tag": showSomething,
           "write down *tag": writeDown,
-          "my favorite color is *tag": colors,
+          "*tag": colors,
           "play sound": function () {
             audio.play();
           },
