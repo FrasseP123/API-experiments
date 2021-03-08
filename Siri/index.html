@@ -64,7 +64,7 @@
           }
         };
     
-    //adding audio playing when specific words are spoken
+    //adding audio playing when "play sound" is said
         var audio = new Audio(
           "https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3"
         );
@@ -78,6 +78,9 @@
             audio.play();
           },
         };
+        annyang.addCallback("result", function (phrases) {
+          document.body.innerHTML = "I think you said: " + phrases[0];
+        });
 
     annyang.debug();
     annyang.addCommands(commands);
