@@ -63,6 +63,21 @@
             alert("Not a color, stupid");
           }
         };
+    
+    //adding audio playing when specific words are spoken
+        var audio = new Audio(
+          "https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3"
+        );
+
+        var commands = {
+          "hello (there)": hello,
+          "show me *tag": showSomething,
+          "write down *tag": writeDown,
+          "*tag": colors,
+          "play sound": function () {
+            audio.play();
+          },
+        };
 
     annyang.debug();
     annyang.addCommands(commands);
