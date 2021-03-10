@@ -40,7 +40,7 @@
           if (word.indexOf("sad") > -1) {
             sad.play();
           }
-          if (word.indexOf("happy") > -1) {
+          if (word.indexOf ("happy") || ("love") > -1)  {
             happy.play();
           }
           //Searches if the words "sad" or "happy" are present in the array and if not plays a randomized neutral sound
