@@ -13,15 +13,22 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script>
       if (annyang) {
-
         //Declares variables for sound files
         var sad = new Audio("Sad.m4a");
 
         var happy = new Audio("Happy.m4a");
 
+        let neutral = [
+          "Neutral.m4a",
+          "Neutral 2.m4a",
+          "Neutral 3.m4a",
+          "Neutral 4.m4a",
+          "Neutral 5.m4a",
+          "Neutral 6.m4a",
+        ];
+
         //Listens for words/feelings
         var feelings = function (tag) {
-
           //Splits based on symbol " " and puts in array
           let word = tag.split(/\s+/);
 
@@ -36,15 +43,25 @@
           if (word.indexOf("happy") > -1) {
             happy.play();
           }
+          //Searches if the words "sad" or "happy" are present in the array and if not plays a randomized neutral sound
+          if ((word.indexOf("sad") == -1) && (word.indexOf("happy") == -1)) {
+            let randomAudio =
+              neutral[Math.floor(Math.random() * neutral.length)];
+
+            let neutralFiles = new Audio(randomAudio);
+            neutralFiles.play();
+          }
         };
-        
-        
+
+        //Declares variable for the commands used
+        var commands = {
+          "*tag": feelings,
+        };
 
         //Prints what the API thinks I said on to the document
         annyang.addCallback("result", function (phrases) {
           document.body.innerHTML = "I think you said: " + phrases[0];
         });
-
 
         //Adds debug console and commands, sets language to English and starts Annyang
         annyang.debug();
