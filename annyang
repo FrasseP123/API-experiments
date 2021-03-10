@@ -38,17 +38,7 @@
           }
         };
         
-        let randomAudio =
-              neutral[Math.floor(Math.random() * neutral.length)];
-
-            let neutralFiles = new Audio(randomAudio);
-            neutralFiles.play();
-          }
-
-        //Declares variable for the commands used
-        var commands = {
-          "*tag": feelings,
-        };
+        
 
         //Prints what the API thinks I said on to the document
         annyang.addCallback("result", function (phrases) {
