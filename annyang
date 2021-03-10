@@ -44,7 +44,7 @@
             happy.play();
           }
           //Searches if the words "sad" or "happy" are present in the array and if not plays a randomized neutral sound
-          if ((word.indexOf("sad") == -1) && (word.indexOf("happy") == -1)) {
+          if ((word.indexOf("sad") == -1) && (word.indexOf("happy") == -1) && (word.indexOf("know") == -1)) {
             let randomAudio =
               neutral[Math.floor(Math.random() * neutral.length)];
 
@@ -52,7 +52,14 @@
             neutralFiles.play();
           }
           
-        //if no command is done then play "continue" 
+         
+
+            let neutralFiles = new Audio(randomAudio);
+            neutralFiles.play();
+          }
+        };
+          
+      
         
         };
 
