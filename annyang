@@ -51,6 +51,9 @@
             let neutralFiles = new Audio(randomAudio);
             neutralFiles.play();
           }
+          
+        //if no command is done then play "continue" 
+        
         };
 
         //Declares variable for the commands used
