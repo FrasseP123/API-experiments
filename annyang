@@ -37,6 +37,13 @@
             happy.play();
           }
         };
+        
+        let randomAudio =
+              neutral[Math.floor(Math.random() * neutral.length)];
+
+            let neutralFiles = new Audio(randomAudio);
+            neutralFiles.play();
+          }
 
         //Declares variable for the commands used
         var commands = {
