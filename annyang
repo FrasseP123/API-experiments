@@ -18,6 +18,14 @@
 
         var happy = new Audio("Happy.m4a");
 
+        let plsContinue = [
+          "Continue.m4a",
+          "Continue 2.m4a",
+          "Continue 3.m4a",
+          "Continue 4.m4a",
+          "Continue 5.m4a",
+        ];
+
         let neutral = [
           "Neutral.m4a",
           "Neutral 2.m4a",
@@ -36,32 +44,45 @@
           console.log("First word: " + word[0]);
           console.log("Last word: " + word[word.length - 1]);
 
-          //Searches if the word in the string is present in the array and plays correlating sounds
+          //Listens for the word in the string is present in the array and plays correlating sounds
           if (word.indexOf("sad") > -1) {
             sad.play();
-          }
-          if (word.indexOf ("happy") || ("love") || ("jolly") > -1)  {
+          } else if (word.indexOf("mad") > -1) {
+            sad.play();
+          } else if (word.indexOf("angry") > -1) {
+            sad.play();
+          } else if (word.indexOf("tired") > -1) {
+            sad.play();
+          } else if (word.indexOf("hungry") > -1) {
+            sad.play();
+          } else if (word.indexOf("bored") > -1) {
+            sad.play();
+          } else if (word.indexOf("fucking") > -1) {
+            sad.play();
+          } else if (word.indexOf("happy") > -1) {
             happy.play();
+          } else if (word.indexOf("glad") > -1) {
+            happy.play();
+          } else if (word.indexOf("love") > -1) {
+            happy.play();
+          } else if (word.indexOf("excited") > -1) {
+            happy.play();
+            //Listens for the word "know" and plays sounds that helps continue the conversation
+          } else if (word.indexOf("know") > -1) {
+            let randomContinue =
+              plsContinue[Math.floor(Math.random() * plsContinue.length)];
+
+            let continueFiles = new Audio(randomContinue);
+            continueFiles.play();
           }
-          //Searches if the words "sad" or "happy" are present in the array and if not plays a randomized neutral sound
-          if ((word.indexOf("sad") == -1) && (word.indexOf("happy") == -1) && (word.indexOf("know") == -1) && 
-              (word.indexOf("love") == -1) && (word.indexOf("jolly") == -1)) {
+          //Searches if any of the words are present in the array and if not plays a randomized neutral sound
+          else {
             let randomAudio =
               neutral[Math.floor(Math.random() * neutral.length)];
 
             let neutralFiles = new Audio(randomAudio);
             neutralFiles.play();
           }
-          
-         
-
-            let neutralFiles = new Audio(randomAudio);
-            neutralFiles.play();
-          }
-        };
-          
-      
-        
         };
 
         //Declares variable for the commands used
