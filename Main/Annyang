@@ -8,19 +8,39 @@
         font-size: 60px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
+        padding-top: 25rem;
+      }
+
+      #attentionBtn {
+        background-color: white;
+        text-decoration: none;
+        font-size: 40px;
+        font-family: Verdana;
+        font-weight: 300;
+        padding: 20px 20px;
+        border-radius: 20px;
+        outline: none;
+        box-shadow: -5px 5px;
       }
     </style>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
   </head>
   <body>
+    <button id = "attentionBtn">Click me to get my attention!</button>
     <script>
       if (annyang) {
+
+        document.getElementById("attentionBtn").addEventListener("click", function() {
+          document.getElementById("attentionBtn").innerHTML = "I am listening...";
+        });
+
         //Declares variables for sound files
         let sad = new Audio("Sad.m4a");
 
         let happy = new Audio("Happy.m4a");
 
         let hello = new Audio("hi.m4a");
+
         let goodbye = new Audio("goodbye.m4a");
 
         let plsContinue = [
