@@ -80,6 +80,12 @@
             sad.play();
           } else if (word.indexOf("hungry") > -1) {
             sad.play();
+          } else if (word.indexOf("depressed") > -1) {
+            sad.play();
+          } else if (word.indexOf("stressed") > -1) {
+            sad.play();
+          } else if (word.indexOf("frustrated") > -1) {
+            sad.play();
           } else if (word.indexOf("bored") > -1) {
             sad.play();
           } else if (word.indexOf("fucking") > -1) {
@@ -91,6 +97,10 @@
           } else if (word.indexOf("love") > -1) {
             happy.play();
           } else if (word.indexOf("excited") > -1) {
+            happy.play();
+          } else if (word.indexOf("cheerful") > -1) {
+            happy.play();
+          } else if (word.indexOf("lucky") > -1) {
             happy.play();
           } else if (word.indexOf("hello") > -1) {
             hello.play();
