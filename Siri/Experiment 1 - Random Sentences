@@ -89,6 +89,16 @@ if (annyang) {
 
             let sadSoundsFiles = new Audio(randomSadSounds);
             sadSoundsFiles.play();
+  
+   //Searches if any of the words are present in the array and if not plays a randomized neutral sound (taken from the main)
+           } else {
+            let randomAudio =
+              neutral[Math.floor(Math.random() * neutral.length)];
+
+            let neutralFiles = new Audio(randomAudio);
+            neutralFiles.play();
+          }
+        };
 
  //Declares variable for the commands used
         var commands = {
