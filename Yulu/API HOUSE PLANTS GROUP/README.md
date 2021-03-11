@@ -1,6 +1,9 @@
 # API HOUSE PLANT EXPERIMENT FOR GROUP
 ## Description of the project
 Browser will react to user's speech and then display relevant voice to it. The website will print out user's words when user would be speaking. Because website needed to be clicked to run "audio.play()" function, webiste suggest a feedforward by displaying a plant picture and texts.
+![g1](https://user-images.githubusercontent.com/79635121/110808206-0ec4bb00-8284-11eb-9acf-f341d645c7d5.png)
+![g2](https://user-images.githubusercontent.com/79635121/110808218-11271500-8284-11eb-99f5-972313c2da16.png)
+![g3](https://user-images.githubusercontent.com/79635121/110808602-6f53f800-8284-11eb-8f1c-53edfc0aa719.png)
 ### Chosen example
 Chosen example is API from Annyang which allows browser to listen and recognize user's speech.Users are allowed to say whichever they want, and the browser will catch part of the conversation and react accordingly."
 ### Positive words
