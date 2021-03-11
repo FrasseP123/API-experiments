@@ -21,6 +21,16 @@ if (annyang) {
         var sad = new Audio("Sad.m4a");
         var happy = new Audio("Happy.m4a");
         
+  //Sad sounds that will play when a specific command is done
+        let sadSounds = [
+            "Sad “it will get better, but pls tell me why”.m4a",
+            "Sad “pls tell me why”.m4a",
+           
+        ];       
+        
+        
+        
+        
  //Listens for words or feelings
         var feelings = function (tag) {
         //Splits based on symbol " " and puts in array
