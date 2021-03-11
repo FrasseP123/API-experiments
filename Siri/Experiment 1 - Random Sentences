@@ -12,11 +12,11 @@ if (annyang) {
 
 
 
-  // Add our commands to annyang
-  annyang.addCommands(commands);
-
-  // Start listening. You can call this here, or attach this call to an event, button, etc.
-  annyang.start();
+  //Adds debug console and commands, sets language to English and starts Annyang
+        annyang.debug();
+        annyang.addCommands(commands);
+        annyang.setLanguage("en");
+        annyang.start();
 }
 </script>
  </head>
