@@ -64,7 +64,13 @@ if (annyang) {
           } else if (word.indexOf("excited") > -1) {
             happy.play();
 
+   //Listens for the word "happy" and plays sounds a randome sound (taken from the main annyang)
+          } else if (word.indexOf("happy") > -1)  {
+            let randomContinue =
+              plsContinue[Math.floor(Math.random() * plsContinue.length)];
 
+            let continueFiles = new Audio(randomContinue);
+            continueFiles.play();
 
 
  //Declares variable for the commands used
