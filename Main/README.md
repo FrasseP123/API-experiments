@@ -1,4 +1,7 @@
-A general README.md
+# API HOUSE PLANT - VOICE RECOGNITION 
+
+## Description of the project
+Our project aims to simulate human's real life talking with house plants. The purpose is to prototype how humans can be mentally supported by house plants. 
 
 Explaining the project:
 
