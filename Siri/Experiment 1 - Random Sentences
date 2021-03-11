@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+  
+  //adding style css
   <style>
       body {
         color: black;
@@ -13,6 +15,15 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
 if (annyang) {
+
+ //Listens for words or feelings
+        var feelings = function (tag) {
+        //Splits based on symbol " " and puts in array
+          let word = tag.split(/\s+/);
+
+          //Console logs the first and last word from in the array
+          console.log("First word: " + word[0]);
+          console.log("Last word: " + word[word.length - 1]);
  
 
 
