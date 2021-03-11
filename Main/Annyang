@@ -26,6 +26,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
   </head>
   <body>
+    <img id="img" src="img.png" width="768" height="576" />
     <button id = "attentionBtn">Click me to get my attention!</button>
     <script>
       if (annyang) {
@@ -132,7 +133,8 @@
 
         //Prints what the API thinks I said on to the document
         annyang.addCallback("result", function (phrases) {
-          document.body.innerHTML = "I think you said: " + phrases[0];
+          img.src="img1.png";
+          attentionBtn.innerHTML = "I think you said: " + phrases[0];
         });
 
         //Adds debug console and commands, sets language to English and starts Annyang
