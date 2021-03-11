@@ -21,8 +21,6 @@ if (annyang) {
         var sad = new Audio("Sad.m4a");
         var happy = new Audio("Happy.m4a");
         
-        
-
  //Listens for words or feelings
         var feelings = function (tag) {
         //Splits based on symbol " " and puts in array
@@ -32,6 +30,25 @@ if (annyang) {
           console.log("First word: " + word[0]);
           console.log("Last word: " + word[word.length - 1]);
  
+ //Listens if the word in the string is present in the array and will play the assignes sound
+          if (word.indexOf("mad") > -1) {
+            sad.play();
+          } else if (word.indexOf("angry") > -1) {
+            sad.play();
+          } else if (word.indexOf("tired") > -1) {
+            sad.play();
+          } else if (word.indexOf("hungry") > -1) {
+            sad.play();
+          } else if (word.indexOf("bored") > -1) {
+            sad.play();
+          } else if (word.indexOf("fucking") > -1) {
+            sad.play();
+          } else if (word.indexOf("glad") > -1) {
+            happy.play();
+          } else if (word.indexOf("love") > -1) {
+            happy.play();
+          } else if (word.indexOf("excited") > -1) {
+            happy.play();
 
 
 
