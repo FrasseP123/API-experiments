@@ -32,6 +32,16 @@ if (annyang) {
           "Happy “that’s great”.m4a",
         ];
         
+    //neutral sounds that will play when no specified command is done
+        let neutral = [
+          "Neutral.m4a",
+          "Neutral 2.m4a",
+          "Neutral 3.m4a",
+          "Neutral 4.m4a",
+          "Neutral 5.m4a",
+          "Neutral 6.m4a",
+        ];
+        
         
         
         
