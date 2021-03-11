@@ -72,6 +72,13 @@ if (annyang) {
             let continueFiles = new Audio(randomContinue);
             continueFiles.play();
 
+   //Listens for the word "sad" and plays sounds a randome sound
+          } else if (word.indexOf("sad") > -1)  {
+            let randomSadSounds =
+              sadSounds[Math.floor(Math.random() * sadSounds.length)];
+
+            let sadSoundsFiles = new Audio(randomSadSounds);
+            sadSoundsFiles.play();
 
  //Declares variable for the commands used
         var commands = {
