@@ -2,23 +2,23 @@
 <html>
   <head>
     <style>
-            body {
-              background-color: rgba(24, 163, 19, 0.363);
-              text-align: center;
-              padding-top: 25rem;
-            }
+      body {
+        background-color: rgba(24, 163, 19, 0.363);
+        text-align: center;
+        padding-top: 25rem;
+      }
 
-            #btn {
-              background-color: white;
-              text-decoration: none;
-              font-size: 40px;
-              font-family: Verdana;
-              font-weight: 300;
-              padding: 20px 20px;
-              border-radius: 20px;
-              outline: none;
-              box-shadow: -5px 5px;
-            }
+      #btn {
+        background-color: white;
+        text-decoration: none;
+        font-size: 40px;
+        font-family: Verdana;
+        font-weight: 300;
+        padding: 20px 20px;
+        border-radius: 20px;
+        outline: none;
+        box-shadow: -5px 5px;
+      }
     </style>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script>
@@ -28,7 +28,7 @@
           //Splits based on symbol " " and puts in array
           let word = tag.split(/\s+/);
 
-          //Searches if the word in the string is present in the array
+          //Searches if the word (color) in the string is present in the array
           if (word.indexOf("blue") > -1) {
             document.body.style.backgroundColor = "blue";
           }
@@ -41,16 +41,55 @@
           if (word.indexOf("green") > -1) {
             document.body.style.backgroundColor = "green";
           }
-        }
-          var commands = {
-            "*tag": colors,
-          };
+          if (word.indexOf("pink") > -1) {
+            document.body.style.backgroundColor = "pink";
+          }
+          if (word.indexOf("orange") > -1) {
+            document.body.style.backgroundColor = "orange";
+          }
+          if (word.indexOf("gold") > -1) {
+            document.body.style.backgroundColor = "gold";
+          }
+          if (word.indexOf("khaki") > -1) {
+            document.body.style.backgroundColor = "khaki";
+          }
+          if (word.indexOf("violet") > -1) {
+            document.body.style.backgroundColor = "violet";
+          }
+          if (word.indexOf("purple") > -1) {
+            document.body.style.backgroundColor = "purple";
+          }
+          if (word.indexOf("indigo") > -1) {
+            document.body.style.backgroundColor = "indigo";
+          }
+          if (word.indexOf("lime") > -1) {
+            document.body.style.backgroundColor = "lime";
+          }
+          if (word.indexOf("teal") > -1) {
+            document.body.style.backgroundColor = "teal";
+          }
+          if (word.indexOf("olive") > -1) {
+            document.body.style.backgroundColor = "olive";
+          }
+          if (word.indexOf("midnight") > -1) {
+            document.body.style.backgroundColor = "MidnightBlue";
+          }
+          if (word.indexOf("turquoise") > -1) {
+            document.body.style.backgroundColor = "turquoise";
+          }
+        };
 
-      annyang.debug();
-      annyang.addCommands(commands);
-      annyang.setLanguage("en");
-      annyang.start();
-};
+        //Adds variable for commands and searches for the tag (colors)
+        var commands = {
+          "*tag": colors,
+        };
+
+        //Adds debug console and commands, sets language to English and starts Annyang
+        annyang.debug();
+        annyang.addCommands(commands);
+        annyang.setLanguage("en");
+        annyang.start();
+      }
     </script>
   </head>
   <body>
