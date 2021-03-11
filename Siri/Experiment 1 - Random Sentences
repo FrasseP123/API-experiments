@@ -16,6 +16,13 @@
 <script>
 if (annyang) {
 
+ //Declared variables and sound audio. These are emplimented on many different feelings
+        
+        var sad = new Audio("Sad.m4a");
+        var happy = new Audio("Happy.m4a");
+        
+        
+
  //Listens for words or feelings
         var feelings = function (tag) {
         //Splits based on symbol " " and puts in array
