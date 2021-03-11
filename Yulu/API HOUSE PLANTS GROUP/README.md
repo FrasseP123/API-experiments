@@ -18,6 +18,6 @@ If users say other words that do not include positive and negative words we defi
 ## Usage of the project
 To simulate plant and user conversation, the API allows user to talk freely. This project can be used to push human to continue conversation with plants and understand conversation flow and expressions of human's feelings.
 ## Extend to group prototype 
-Words are categorized and are given responses accordingly. Event listner are added to change texts with interface interactions.  
+Words are categorized and are given responses accordingly. Change of html texts are implied. Event listner are added to change texts with click motions. 
 ## Use of code
 Please download Visual Studio Code. Copy and Paste all file's documents into a folder and open folder with Visual Studio Code. Use Live Server when open browser. All pictures are drawn by me only. All codes are developed by me.
