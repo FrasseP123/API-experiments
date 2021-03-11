@@ -11,7 +11,9 @@
       }
     </style>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-    <script>
+  </head>
+  <body>
+      <script>
       if (annyang) {
     
         //Declares variables for sound files
@@ -112,6 +114,5 @@
         annyang.start();
       }
     </script>
-  </head>
-  <body></body>
+  </body>
 </html>
