@@ -13,10 +13,14 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script>
       if (annyang) {
+    
         //Declares variables for sound files
         var sad = new Audio("Sad.m4a");
 
         var happy = new Audio("Happy.m4a");
+        
+        var hello = new Audio("hi.m4a");
+        var goodbye = new Audio("goodbye.m4a");
 
         let plsContinue = [
           "Continue.m4a",
