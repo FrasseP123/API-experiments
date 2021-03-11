@@ -71,6 +71,12 @@
             happy.play();
           } else if (word.indexOf("excited") > -1) {
             happy.play();
+           } else if (word.indexOf("hello") > -1) {
+            hello.play();
+          } else if (word.indexOf("goodbye") > -1) {
+            goodbye.play();  
+            
+            
             //Listens for the word "know" and plays sounds that helps continue the conversation
           } else if (word.indexOf("know") > -1) {
             let randomContinue =
