@@ -24,9 +24,13 @@ if (annyang) {
   //Sad sounds that will play when a specific command is done
         let sadSounds = [
             "Sad “it will get better, but pls tell me why”.m4a",
-            "Sad “pls tell me why”.m4a",
-           
-        ];       
+            "Sad “pls tell me why”.m4a",    
+        ];  
+   
+   //Happy sounds that will play when a specific sound is played 
+        let plsContinue = [
+          "Happy “that’s great”.m4a",
+        ];
         
         
         
