@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        color: black;
+        background-color: rgba(24, 163, 19, 0.363);
+        font-size: 60px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+      }
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script>
+      if (annyang) {
+        //Declares variables for sound files
+        var sad = new Audio("Sad.m4a");
+
+        var happy = new Audio("Happy.m4a");
+
+        let plsContinue = [
+          "Continue.m4a",
+          "Continue 2.m4a",
+          "Continue 3.m4a",
+          "Continue 4.m4a",
+          "Continue 5.m4a",
+        ];
+
+        let neutral = [
+          "Neutral.m4a",
+          "Neutral 2.m4a",
+          "Neutral 3.m4a",
+          "Neutral 4.m4a",
+          "Neutral 5.m4a",
+          "Neutral 6.m4a",
+        ];
+
+        //Listens for words/feelings
+        var feelings = function (tag) {
+          //Splits based on symbol " " and puts in array
+          let word = tag.split(/\s+/);
+
+          //Console logs the first and last word from in the array
+          console.log("First word: " + word[0]);
+          console.log("Last word: " + word[word.length - 1]);
+
+          //Listens for the word in the string is present in the array and plays correlating sounds
+          if (word.indexOf("sad") > -1) {
+            sad.play();
+          } else if (word.indexOf("mad") > -1) {
+            sad.play();
+          } else if (word.indexOf("angry") > -1) {
+            sad.play();
+          } else if (word.indexOf("tired") > -1) {
+            sad.play();
+          } else if (word.indexOf("hungry") > -1) {
+            sad.play();
+          } else if (word.indexOf("bored") > -1) {
+            sad.play();
+          } else if (word.indexOf("fucking") > -1) {
+            sad.play();
+          } else if (word.indexOf("happy") > -1) {
+            happy.play();
+          } else if (word.indexOf("glad") > -1) {
+            happy.play();
+          } else if (word.indexOf("love") > -1) {
+            happy.play();
+          } else if (word.indexOf("excited") > -1) {
+            happy.play();
+            //Listens for the word "know" and plays sounds that helps continue the conversation
+          } else if (word.indexOf("know") > -1) {
+            let randomContinue =
+              plsContinue[Math.floor(Math.random() * plsContinue.length)];
+
+            let continueFiles = new Audio(randomContinue);
+            continueFiles.play();
+          }
+          //Searches if any of the words are present in the array and if not plays a randomized neutral sound
+          else {
+            let randomAudio =
+              neutral[Math.floor(Math.random() * neutral.length)];
+
+            let neutralFiles = new Audio(randomAudio);
+            neutralFiles.play();
+          }
+        };
+
+        //Declares variable for the commands used
+        var commands = {
+          "*tag": feelings,
+        };
+
+        //Prints what the API thinks I said on to the document
+        annyang.addCallback("result", function (phrases) {
+          document.body.innerHTML = "I think you said: " + phrases[0];
+        });
+
+        //Adds debug console and commands, sets language to English and starts Annyang
+        annyang.debug();
+        annyang.addCommands(commands);
+        annyang.setLanguage("en");
+        annyang.start();
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
