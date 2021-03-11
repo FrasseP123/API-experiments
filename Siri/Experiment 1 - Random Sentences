@@ -29,7 +29,15 @@ if (annyang) {
 
 
 
+ //Declares variable for the commands used
+        var commands = {
+          "*tag": feelings,
+        };
 
+        //Prints what you say to the API document 
+        annyang.addCallback("result", function (phrases) {
+          document.body.innerHTML = "You said: " + phrases[0];
+        });
 
   //Adds debug console and commands, sets language to English and starts Annyang
         annyang.debug();
