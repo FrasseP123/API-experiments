@@ -1,9 +1,12 @@
 
-Explaining the project:
+## API Project:
+This project is connected to another project where we explore communication between a user and a plant. 
+Annyang is an API library that uses voice recognition 
 
 What the project does
 
 Describe your project
+
 
 Why the project is useful
 
