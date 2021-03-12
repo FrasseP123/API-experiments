@@ -12,10 +12,6 @@ Why the project is useful
 
 What is the project is exploring (remember you are prototyping)
 
-How users can get started with the project
-
-
-
 
 ## Use of Code
 Please download all the files and folders in the “main” folder, download Visual Studio Code. Put all document’s files in one folder and open with Visual Studio Code. Use Liver Server when run the code in the browser.
