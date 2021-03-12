@@ -1,4 +1,4 @@
-# API House plant Project- Voice Recognition  :
+# API House plant Project - Voice Recognition  :
 This project is connected to another project where we explore communication between a user and a plant. 
 Annyang is an API library that uses voice recognition 
 
