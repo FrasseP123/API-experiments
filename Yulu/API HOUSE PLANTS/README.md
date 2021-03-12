@@ -15,4 +15,5 @@ User says"I am having a bad day." Browser displays accrodingly images and line "
 ## Usage of the project
 This project magnifies the communication through images and texts. The point is to set up stage to see whether stakeholders can understand the situation we are designing for or not.
 ## Use of code
-Please download Visual Studio Code. Copy and Paste all file's documents into a folder and open folder with Visual Studio Code. Use Live Server when open browser. All pictures are drawn by me only. All codes are developed by me. 
+Please download Visual Studio Code. Copy and Paste all file's documents into a folder and open folder with Visual Studio Code. Use Live Server when open browser. All pictures are drawn by me only. ll codes built upon Annyang’s example are made by me.  Ref: https://www.talater.com/annyang/    https://github.com/TalAter/annyang
+ 
