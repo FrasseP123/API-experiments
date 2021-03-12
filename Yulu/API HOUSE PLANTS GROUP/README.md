@@ -22,4 +22,4 @@ To simulate plant and user conversation, the API allows user to talk freely. Thi
 ## Extend to group prototype 
 Words are categorized and are given responses accordingly. Change of html texts are implied. Event listner are added to change texts with click motions. 
 ## Use of code
-Please download Visual Studio Code. Copy and Paste all file's documents into a folder and open folder with Visual Studio Code. Use Live Server when open browser. All pictures are drawn by me only. All codes are developed by me.
+Please download Visual Studio Code. Copy and Paste all file's documents into a folder and open folder with Visual Studio Code. Use Live Server when open browser. All pictures are drawn by me only. All codes are built upon Annyang’s examples by me.  Ref: https://www.talater.com/annyang/   https://github.com/TalAter/annyang
