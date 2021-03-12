@@ -6,7 +6,12 @@ https://user-images.githubusercontent.com/78792592/110986538-12cd0780-836e-11eb-
 
 ## My project
 
-In this experiment I’ve experimented with the API, to make it as a simple colour game. The user is exposed to a  button with a sting suggesting an action. Underneath is a picture of a flower. The user speaks the colour of the flower and it changes into a new one. If the wrong colour is stated, nothing will happen.  This simple prototype can be used for educational purposes to teach colors, for kids for an example. 
+In this project I’ve experimented with the API, to make it as a simple colour game. The user is exposed to a  button with a sting suggesting an action. Underneath is a picture of a flower. The user speaks the colour of the flower and it changes into a new one. If the wrong colour is stated, nothing will happen.   
+
+## What is explored
+
+This simple prototype can be used for educational purposes to teach colors, for kids for an example. Any trigger word can be put into the code and the picture connected to it can be whatever, animals, shapes, etc. 
+
 
 
 
