@@ -1,4 +1,4 @@
-## 
+## API Project - Randome sentences experiment
 
 This project is based on Annyang’s API (read more about this in the “Main” README.md). In our main project, we’ve worked with simple sound outputs taken from conversations. (picture from annyang's website below)
 
