@@ -29,6 +29,8 @@
     <img id="img" src="img.png" width="768" height="576" />
     <button id = "attentionBtn">Click me to get my attention!</button>
     <script>
+    
+      let img=document.getElementById("img");
       if (annyang) {
 
         document.getElementById("attentionBtn").addEventListener("click", function() {
