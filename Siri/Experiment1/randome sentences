@@ -6,7 +6,7 @@
   <style>
       body {
         color: black;
-        background-color: rgba(24, 163, 19, 0.363);
+        background-color: rgba(71, 194, 112, 0.363);
         font-size: 60px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
@@ -18,18 +18,25 @@ if (annyang) {
 
  //Declared variables and sound audio. These are emplimented on many different feelings
         
-        var sad = new Audio("Sad.m4a");
-        var happy = new Audio("Happy.m4a");
+        let sad = new Audio("Sad.m4a");
+        let happy = new Audio("Happy.m4a");
+        let stressed = new Audio("Stressed “walk”.m4a");
+        let hello = new Audio("Hello “hi, how are you”.m4a");
+        let goodbye = new Audio("Farewell “see you later alligator”.m4a");
         
-  //Sad sounds that will play when a specific command is done
+ //Sad sounds that will play when a specific command is done
         let sadSounds = [
             "Sad “it will get better, but pls tell me why”.m4a",
-            "Sad “pls tell me why”.m4a",    
-        ];  
+            "Sad “pls tell me why”.m4a",   
+            
+        ];
    
    //Happy sounds that will play when a specific sound is played 
         let plsContinue = [
-          "Happy “that’s great”.m4a",
+            "Happy “that’s great”.m4a",
+            "Happy “that’s nice to hear”.m4a",
+            "Happy “nice tell me”.m4a",
+
         ];
         
     //neutral sounds that will play when no specified command is done
