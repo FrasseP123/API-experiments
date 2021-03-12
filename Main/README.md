@@ -1,6 +1,9 @@
 # API House plant Project - Voice Recognition  :
-This project is connected to another project where we explore communication between a user and a plant. 
-Annyang is an API library that uses voice recognition 
+ 
+This API project is connected to another project where we explore communication between a person and a plant. 
+Annyang is an API library that uses voice recognition and lets the user control the browser with their voice. 
+We have in this project, created a way for the API to respond to the users commands with different sound outputs, making the user in some way feel as if they are in a conversation. The sounds that we used can be found in a conversation between people, all only being one worded. 
+
 
 What the project does
 
