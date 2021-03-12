@@ -28,7 +28,7 @@
           //Splits based on symbol " " and puts in array
           let word = tag.split(/\s+/);
 
-          //Searches if the word (color) in the string is present in the array
+          //Searches if the word (color) in the string is present in the array, in other words splits the sentence in to seperate words
           if (word.indexOf("blue") > -1) {
             document.body.style.backgroundColor = "blue";
           }
