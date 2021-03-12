@@ -21,5 +21,5 @@ How users can get started with the project
 Please download all the files and folders in the “main” folder, download Visual Studio Code. Put all document’s files in one folder and open with Visual Studio Code. Use Liver Server when run the code in the browser.
 
 ## Contributors and who is responsible
-Frans, Siri and Yulu are contributors to the project. All audio files are recorded by us. All codes are developed by us. 
+Frans, Siri and Yulu are contributors to the project. All audio files are recorded by us. Despite Annyang's skeleton, all codes are developed by us. 
 
