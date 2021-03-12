@@ -10,6 +10,18 @@
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
       };
+      
+      #attentionBtn {
+        background-color: white;
+        text-decoration: none;
+        font-size: 40px;
+        font-family: Verdana;
+        font-weight: 300;
+        padding: 20px 20px;
+        border-radius: 20px;
+        outline: none;
+        box-shadow: -5px 5px;
+      };
 
 
     </style>
@@ -18,8 +30,8 @@
   <body>
     <!--inset picture-->
     <img id="img" src="img.png" width="768" height="576" />
-    <!--insert texts -->
-    <h1 id="click">Click me!</h1>
+    <!--insert button with texts -->
+    <button id = "attentionBtn">Click me to get my attention!</button>
     <script>
       if (annyang) {
 
@@ -37,20 +49,22 @@
           "Neutral 6.m4a",
         ];
 
-        // get picture and text
-        let click=document.getElementById("click");
-
+        // get picture and buttons text
+        
         let img=document.getElementById("img");
+        
+        let click=document.getElementById("attentionBtn");
+
         
 
         // a function for display the image and change text content
         function switchtopic(){
-          click.innerHTML="I am listening.";
+          click.innerHTML="I am listening...";
           img.src="img1.png";
         };
 
         //when user click the webpage, run "switchtopic" function
-        document.addEventListener("click",switchtopic);
+        click.addEventListener("click",switchtopic);
 
         //Listens for words/feelings
         var feelings = function (tag) {
