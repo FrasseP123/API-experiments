@@ -16,7 +16,7 @@ I wanted to make this experiment to see my ability to code an actual conversatio
 
 
 ## What you need to know
-Annyang is a pretty simple API to work with. The sceleton that we built our main project on and that I experimented with was easy to ad on code to, to make it as we wated it. What the programmer needs is a vision, what is going to happen and then add commands. Ether the audio files from the folder can be downloaded, or new files can be recorded that are then added to the code. To make the browser start listening, an interaction with the pages needs to be done, such as a click with the mouse. After this you start talking and you will recive feedback, at the same time as you'll se what you were saying. 
+Annyang is a pretty simple API to work with. The sceleton that we built our main project on and that I experimented with was easy to ad on code to, to make it as we wated it. What the programmer needs is the programs stated in the "main README.md and ofcourse a visionis, what is going to happen and then add commands. Ether the audio files from the folder can be downloaded, or new files can be recorded that are then added to the code. To make the browser start listening, an interaction with the pages needs to be done, such as a click with the mouse. After this you start talking and you will recive feedback, at the same time as you'll se what you were saying. 
 An importent thing is that the audio files that are added to the code can not contain any off the trigger words, or they will trigger another respons. Another thing to keep in mind is that audio with longer sentences vill trigger the neutral outputs.
 
 
