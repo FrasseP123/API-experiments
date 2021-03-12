@@ -1,4 +1,4 @@
-# API House plant Project - Voice Recognition:
+# API Lab - Houseplants:
  
 This API project is connected to another project where we explore communication between a person and a plant. 
 Annyang is an API library that uses voice recognition and lets the user control the browser with their voice. 
