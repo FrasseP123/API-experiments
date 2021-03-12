@@ -13,8 +13,14 @@ We used the annyang API in our project to prototype if we could artificially cre
 
 With this API we wanted to explore and test what different parameters we could use to evoke different responses from both the human and the “plant”. As input, or in other words what the prototype reacts to, we chose to go with words that had a sentimental value or a certain connotation to them. Words such as “sad”, “angry” or “tired” would trigger a response that sounded emphatic while words like “happy”, “love” and “excited” would trigger noises that sounded excited and jolly.
 
+![image](https://user-images.githubusercontent.com/78792675/110965258-4d29ab00-8354-11eb-8ada-2a3f04673ea7.png)
+![image](https://user-images.githubusercontent.com/78792675/110965323-5c105d80-8354-11eb-82ac-f76f68d49bc1.png)
+![image](https://user-images.githubusercontent.com/78792675/110965409-721e1e00-8354-11eb-891d-a53f42df1ed4.png)
+![image](https://user-images.githubusercontent.com/78792675/110965572-9b3eae80-8354-11eb-8752-a21512544c09.png)
+
+
 ## Use of Code
-Please download all the files and folders in the “main” folder, download Visual Studio Code. Put all document’s files in one folder and open with Visual Studio Code. Use Liver Server when run the code in the browser.
+Please download all the files and folders in the “main” folder, download Visual Studio Code. Put all document’s files in one folder and open with Visual Studio Code. For easier use, use a live server when running the code in the browser.
 
 ## Contributors and who is responsible
 Frans Gustavson Påsse, Siri Wimby and Yulu Zhang are contributors to the project. All audio files are recorded by us. All codes built upon Annyang’s examples are made by us. Ref: https://www.talater.com/annyang/    https://github.com/TalAter/annyang 
