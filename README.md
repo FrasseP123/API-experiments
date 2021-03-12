@@ -20,8 +20,8 @@ With this API we wanted to explore and test what different parameters we could u
 
 
 ## Use of Code
-Please download all the files and folders in the “main” folder, download Visual Studio Code. Put all document’s files in one folder and open with Visual Studio Code. For easier use, use a live server when running the code in the browser.
+Please download all the files and folders in the “main” folder, download Visual Studio Code. Put all document’s files in one folder and open with Visual Studio Code. For easier use, use a live server when running the code in the browser. Now start experimenting with different phrases and see what kind of responses you get.
 
 ## Contributors and who is responsible
-Frans Gustavson Påsse, Siri Wimby and Yulu Zhang are contributors to the project. All audio files are recorded by us. All codes built upon Annyang’s examples are made by us. Ref: https://www.talater.com/annyang/    https://github.com/TalAter/annyang 
+Frans Gustavson Påsse, Siri Wimby and Yulu Zhang are contributors to the project. Special thanks to Taner Olcay for his help. All audio files were recorded by us. All codes built upon Annyang’s examples are made by us. Ref: https://www.talater.com/annyang/    https://github.com/TalAter/annyang 
 
