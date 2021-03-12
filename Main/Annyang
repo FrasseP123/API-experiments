@@ -134,6 +134,8 @@
         };
 
         //Prints what the API thinks I said on to the document
+        
+        annyang.addCallback("result", function (phrases) {
           img.src="img1.png";
           attentionBtn.innerHTML = "I think you said: " + phrases[0];
         });
