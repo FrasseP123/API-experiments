@@ -26,22 +26,34 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
   </head>
   <body>
-    <button id = "attentionBtn">Click me to get my attention!</button>
+    <button id="attentionBtn">Click me to get my attention!</button>
     <script>
       if (annyang) {
-
-        document.getElementById("attentionBtn").addEventListener("click", function() {
-          document.getElementById("attentionBtn").innerHTML = "I am listening...";
-        });
+        //Adds eventlistener to button so the user interacts with the HTML and sound can play (autoplay blocked)
+        document
+          .getElementById("attentionBtn")
+          .addEventListener("click", function () {
+            document.getElementById("attentionBtn").innerHTML =
+              "I am listening...";
+          });
 
         //Declares variables for sound files
-        let sad = new Audio("Sad.m4a");
+        let sad = [
+          "Sad.m4a",
+          "Sad 2.m4a",
+          "Sad 3.m4a",
+          "Sad 4.m4a",
+          "Sad 5.m4a",
+        ];
 
-        let happy = new Audio("Happy.m4a");
-
-        let hello = new Audio("Hello sound.m4a");
-
-        let goodbye = new Audio("Goodbye sound.m4a");
+        let happy = [
+          "Happy.m4a",
+          "Happy 2.m4a",
+          "Happy 3.m4a",
+          "Happy 4.m4a",
+          "Happy 5.m4a",
+          "Happy 6.m4a",
+        ];
 
         let plsContinue = [
           "Continue.m4a",
@@ -60,48 +72,76 @@
           "Neutral 6.m4a",
         ];
 
-        //Listens for words/feelings
+        let hello = new Audio("Hello.m4a");
+
+        let goodbye = new Audio("Goodbye.m4a");
+
+        //Listens for words/feelings as tag
         let feelings = function (tag) {
-          //Splits based on symbol " " and puts in array
+          //Splits based on symbol " " and puts in array, in other words splits the sentence in to seperate words
           let word = tag.split(/\s+/);
 
           //Console logs the first and last word from in the array
           console.log("First word: " + word[0]);
           console.log("Last word: " + word[word.length - 1]);
 
-          //Listens for the word in the string is present in the array and plays correlating sounds
+          //Listens for if the word in the string is present in the array and plays correlating sounds
+          //Also randomizes the array every time and picks a random sound from the variables
           if (word.indexOf("sad") > -1) {
-            sad.play();
+            let randomSad = sad[Math.floor(Math.random() * sad.length)];
+
+            let sadFiles = new Audio(randomSad);
+            sadFiles.play();
           } else if (word.indexOf("mad") > -1) {
-            sad.play();
+            let randomSad = sad[Math.floor(Math.random() * sad.length)];
+
+            let sadFiles = new Audio(randomSad);
+            sadFiles.play();
           } else if (word.indexOf("angry") > -1) {
-            sad.play();
+            let randomSad = sad[Math.floor(Math.random() * sad.length)];
+
+            let sadFiles = new Audio(randomSad);
+            sadFiles.play();
           } else if (word.indexOf("tired") > -1) {
-            sad.play();
+            let randomSad = sad[Math.floor(Math.random() * sad.length)];
+
+            let sadFiles = new Audio(randomSad);
+            sadFiles.play();
           } else if (word.indexOf("hungry") > -1) {
-            sad.play();
-          } else if (word.indexOf("depressed") > -1) {
-            sad.play();
-          } else if (word.indexOf("stressed") > -1) {
-            sad.play();
-          } else if (word.indexOf("frustrated") > -1) {
-            sad.play();
+            let randomSad = sad[Math.floor(Math.random() * sad.length)];
+
+            let sadFiles = new Audio(randomSad);
+            sadFiles.play();
           } else if (word.indexOf("bored") > -1) {
-            sad.play();
+            let randomSad = sad[Math.floor(Math.random() * sad.length)];
+
+            let sadFiles = new Audio(randomSad);
+            sadFiles.play();
           } else if (word.indexOf("fucking") > -1) {
-            sad.play();
+            let randomSad = sad[Math.floor(Math.random() * sad.length)];
+
+            let sadFiles = new Audio(randomSad);
+            sadFiles.play();
           } else if (word.indexOf("happy") > -1) {
-            happy.play();
+            let randomHappy = happy[Math.floor(Math.random() * happy.length)];
+
+            let happyFiles = new Audio(randomHappy);
+            happyFiles.play();
           } else if (word.indexOf("glad") > -1) {
-            happy.play();
+            let randomHappy = happy[Math.floor(Math.random() * happy.length)];
+
+            let happyFiles = new Audio(randomHappy);
+            happyFiles.play();
           } else if (word.indexOf("love") > -1) {
-            happy.play();
+            let randomHappy = happy[Math.floor(Math.random() * happy.length)];
+
+            let happyFiles = new Audio(randomHappy);
+            happyFiles.play();
           } else if (word.indexOf("excited") > -1) {
-            happy.play();
-          } else if (word.indexOf("cheerful") > -1) {
-            happy.play();
-          } else if (word.indexOf("lucky") > -1) {
-            happy.play();
+            let randomHappy = happy[Math.floor(Math.random() * happy.length)];
+
+            let happyFiles = new Audio(randomHappy);
+            happyFiles.play();
           } else if (word.indexOf("hello") > -1) {
             hello.play();
           } else if (word.indexOf("goodbye") > -1) {
@@ -117,21 +157,20 @@
           }
           //Searches if any of the words are present in the array and if not plays a randomized neutral sound
           else {
-            let randomAudio =
+            let randomNeutral =
               neutral[Math.floor(Math.random() * neutral.length)];
 
-            let neutralFiles = new Audio(randomAudio);
+            let neutralFiles = new Audio(randomNeutral);
             neutralFiles.play();
           }
         };
 
-        //Declares variable for the commands used
+        //Declares variable for the keywords used
         let commands = {
           "*tag": feelings,
         };
 
-        //Prints what the API thinks I said on to the document
-        
+        //Prints what the API thinks the user said on to the document
         annyang.addCallback("result", function (phrases) {
           document.body.innerHTML = "I think you said: " + phrases[0];
         });
