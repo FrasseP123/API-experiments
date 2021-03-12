@@ -12,6 +12,10 @@ In this project I’ve experimented with the API, to make it as a simple colour 
 
 This simple prototype can be used for educational purposes to teach colors, for kids for an example. Any trigger word can be put into the code and the picture connected to it can be whatever, animals, shapes, etc. 
 
+## What you need to know
+
+Annyang is a pretty simple API to work with. The sceleton that we built our main project on and that I experimented with was easy to ad on code to, to make it as we wated it. What the programmer needs is  the programs stated in the "main README.md and ofcourse a vision, what is going to happen when talking to the API. Download or create you own pictures and put them into the code. Add the trigger words in the stings and run the code. What is imortant to know is that the window needs to be interacted with befor talking to it, like clicking the mouse. 
 
 
+ 
 
