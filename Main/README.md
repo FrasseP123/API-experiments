@@ -5,6 +5,7 @@ Annyang is an API library that uses voice recognition
 What the project does
 
 Describe your project
+![Annyang example](https://user-images.githubusercontent.com/79635121/110962511-5ebd8380-8351-11eb-96cf-97749180b21d.png)
 
 
 Why the project is useful
